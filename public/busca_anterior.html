@@ -1,0 +1,62 @@
+<!-- busca.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css\styles.css">
+    <title>Busca de Entes</title>
+</head>
+
+<body>
+    <div id="logo-topo" onclick="redirecionarParaIndex()" style="cursor: pointer;">
+        <img src="img\logo-hortalica.png" alt="Logo Hortalica">
+    </div>
+
+    <div class="container mt-5">
+        <h1>Rastreabilidade</h1>
+        <form id="formBusca">
+            <div class="form-group">
+                <label for="identificacaoLote">Identificação do Lote:</label>
+                <input type="text" class="form-control" id="identificacaoLote">
+            </div>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+
+        <div id="resultados" class="mt-3"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js\busca_anterior.js"></script>
+    <script>
+        // Função para redirecionar para a página index.html
+        function redirecionarParaIndex() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+<footer>
+    <!-- botão de imprimir -->
+    <div class="container mt-5">
+
+        <button id="btnImprimir" class="btn btn-primary">Imprimir</button>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const btnImprimir = document.getElementById('btnImprimir');
+
+                btnImprimir.addEventListener('click', function () {
+                    //Função de impressão quando o botão for clicado
+                    window.print();
+                });
+            });
+        </script>
+    </div>
+</footer>
+
+</html>

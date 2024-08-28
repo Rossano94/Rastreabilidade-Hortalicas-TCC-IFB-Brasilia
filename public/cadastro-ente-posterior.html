@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css\styles.css">
+    <title>Cadastro de Ente Anterior</title>
+</head>
+
+<body>
+    <div id="logo-topo" onclick="redirecionarParaIndex()" style="cursor: pointer;">
+        <img src="img\logo-hortalica.png" alt="Logo Hortalica">
+    </div>
+
+    <div class="container mt-5">
+        <form id="formEnteAnterior" method="post" onsubmit="return confirm('ATENÇÃO!!! De acordo com o Art. 9º da Instrução Normativa Conjunta – INC nº 02 de 07/02/2018, é obrigatório manter os registros das informações disponíveis para as autoridades competentes por um período de 18 (dezoito) meses após o tempo de validade ou de expedição dos produtos vegetais frescos. Portanto, as informações salvas não podem ser alteradas ou excluídas. Confirma o cadastro?');">
+            <!-- Informações do Produto Vegetal -->
+            <h4>Informações do <strong>Produto Vegetal</strong> </h4>
+            <!-- Aqui está o campo do menu suspenso para os produtos vegetais -->
+            
+            <div class="form-group">
+                <label for="nomeProdutoVegetal">Nome do Produto Vegetal:</label>
+                <select class="form-control" id="nomeProdutoVegetal" name="nome_produto_vegetal" required>
+                    <option value="">Selecione um produto</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="variedadeCultivar">Variedade ou Cultivar:</label>
+                <select class="form-control" id="variedadeCultivar" name="variedade_cultivar" required>
+                    <option value="">Selecione uma variedade</option>
+                </select>
+            </div>                             
+
+            <div class="form-group">
+                <label for="quantidadeExpedido">Peso Líquido (KG):</label>
+                <input type="number" class="form-control" id="quantidadeExpedido" name="quantidade_expedido" required>
+            </div>
+            <div class="form-group">
+                <label for="identificacaoLote">Identificação do Lote:</label>
+                <input type="text" class="form-control campo-bloqueado" id="identificacaoLote" name="identificacao_lote" required readonly>
+            </div>
+            <div class="form-group">
+                <label for="dataRecebimento">Data da Venda:</label>
+                <input type="date" class="form-control" id="dataRecebimento" name="data_recebimento" required>
+            </div>
+
+            <!-- Informações do Comprador -->
+            <h4>Informações do <strong>Comprador</strong></h4>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="nomeComprador">Nome do Comprador:</label>
+                    <select class="form-control" id="nomeComprador" name="nome_comprador" required>
+                        <option value="">Selecione um Comprador</option>
+                    </select>
+                </div>
+                
+
+            <!-- Botão para cadastrar -->
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="js\cadastro-ente-anterior.js"></script>
+    <script src="js\carregarProdutosVegetais.js"></script>
+    <script src="js\carregarVariedadesCultivar.js"></script>
+    <script src="js/carregarNomesRazoesSociaisComprador.js"></script>
+    <script src="js/gerarLoteVenda.js"></script>
+
+    <script>
+        // Função para redirecionar para a página index.html
+        function redirecionarParaIndex() {
+            window.location.href = "index.html";
+        }
+        carregarProdutosVegetais();
+        carregarVariedadesCultivar();
+        carregarNomesCompradores();
+    </script>
+</body>
+
+</html>

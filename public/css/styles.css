@@ -1,0 +1,174 @@
+body {
+    background: linear-gradient(to bottom, #ffffff, #106A08);
+    /* Gradiente vertical */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* Remover margens padrão do corpo */
+    min-height: 100vh;
+    /* Garante que o gradiente cobre toda a altura da viewport */
+}
+
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    max-width: 400px;
+    /* Ajuste conforme necessário */
+    height: 100%;
+    /* Altura */
+}
+
+h1 {
+    background-color: #ffffff;
+    /* Fundo branco */
+    border: none;
+    /* Remover borda */
+    border-radius: 5px;
+    /* Borda arredondada */
+    padding: 10px;
+    /* Espaçamento interno */
+    color: #000000;
+    /* Cor verde mais escura */
+    text-align: center;
+}
+
+/* Estilo do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo do botão cadastrar ente anterior, cadastrar ente posterior e buscar dados */
+.btn-cadastrar-anterior,
+.btn-cadastrar-posterior {
+    width: 100%;
+    /* Largura total */
+    background-color: #b56f49;
+    /* Azul para ambos os botões */
+    border-color: #b56f49;
+    /* Azul para ambos os botões */
+    color: #ffffff;
+    /* Texto branco para ambos os botões */
+    font-weight: bold;
+    /* Texto em negrito para ambos os botões */
+    font-size: 22px;
+    /* Tamanho da fonte para ambos os botões */
+}
+
+.btn-cadastrar-anterior:hover {
+    color: #ffffff;
+    box-shadow: 0 0 40px #b56f49; /* Adiciona um brilho ao redor do botão */
+    /* Cor do texto ao passar o mouse */
+}
+
+.btn-cadastrar-posterior:hover {
+    color: #ffffff;
+    box-shadow: 0 0 40px #b56f49; /* Adiciona um brilho ao redor do botão */
+    /* Cor do texto ao passar o mouse */
+}
+
+
+.btn-primary {
+    width: 100%;
+    /* Largura total */
+    background-color: #000000;
+    /* Azul para ambos os botões */
+    border-color: #000000;
+    /* Azul para ambos os botões */
+    color: #ffffff;
+    /* Texto branco para ambos os botões */
+    font-weight: bold;
+    /* Texto em negrito para ambos os botões */
+    font-size: 22px;
+    /* Tamanho da fonte para ambos os botões */
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    /* Cor diferente ao passar o mouse */
+    border-color: #000000;
+    /* Cor da borda ao passar o mouse */
+    color: #ffffff;
+    /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo específico para o botão buscar dados */
+.btn-buscar {
+    width: 100%;
+    /* Largura total */
+    background-color: #106A08;
+    /* Vermelho escuro apenas para o botão buscar dados */
+    border-color: #106A08;
+    /* Vermelho escuro apenas para o botão buscar dados */
+    color: #ffffff;
+    /* Texto branco apenas para o botão buscar dados */
+    font-weight: bold;
+    /* Texto em negrito apenas para o botão buscar dados */
+    font-size: 22px;
+    /* Tamanho da fonte apenas para o botão buscar dados */
+}
+
+.btn-buscar:hover {
+    color: #ffffff;
+    /* Cor do texto ao passar o mouse */
+    box-shadow: 0 0 30px #106A08; /* Adiciona um brilho ao redor do botão */
+}
+
+
+.btn-consultar {
+    width: 100%;
+    /* Largura total */
+    background-color: #000000;
+    /* Vermelho escuro apenas para o botão buscar dados */
+    border-color: #000000;
+    /* Vermelho escuro apenas para o botão buscar dados */
+    color: #ffffff;
+    /* Texto branco apenas para o botão buscar dados */
+    font-weight: bold;
+    /* Texto em negrito apenas para o botão buscar dados */
+    font-size: 22px;
+    /* Tamanho da fonte apenas para o botão buscar dados */
+}
+
+/* Cor do texto ao passar o mouse */
+.btn-consultar:hover {
+    color: #ffffff;
+    box-shadow: 0 0 30px #000000; /* Adiciona um brilho ao redor do botão */ 
+}
+
+/* Adicione outros estilos conforme necessário */
+
+/* Estilo para o topo com o logo */
+#logo-topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: -50px;
+}
+#logo-topo-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+#logo-topo img {
+    width: 136px;
+    /* Ajuste conforme necessário */
+    height: 54px;
+    /* Ajuste conforme necessário */
+    margin-right: 0px;
+}
+
+/* Adicione este estilo para centralizar o texto da busca no resultado */
+.resultado-busca {
+    text-align: center;
+}
+
+.campo-bloqueado {
+    background-color: #f2f2f2; /* Cor de fundo cinza */
+}
